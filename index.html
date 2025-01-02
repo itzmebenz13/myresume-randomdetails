@@ -81,6 +81,33 @@ function openApp() {
     }, 2000);
 }
 </script>
+
+    <h1>Open SHEIN App</h1>
+    <p>
+        Click the link below to open the SHEIN app:
+    </p>
+    <a id="shein-link" href="#">Open in SHEIN</a>
+
+    <script>
+        document.getElementById('shein-link').addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // Target SHEIN app or fallback link
+            const appLink = "shein://ugrowth/game/luckypouch/?type=immersive&navigation_transparent=false&navigation=true&src_module=shouye&adp=37320538,33235836&app=shein&device_type=android&language=en&site_uid=andshph&region=PH";
+            const fallbackLink = "https://api-shein.shein.com/ugrowth/game/luckypouch/?type=immersive&navigation_transparent=false&navigation=true&src_module=shouye&adp=37320538,33235836&app=shein&device_type=android&language=en&site_uid=andshph&region=PH";
+
+            // Open app link
+            window.location = appLink;
+
+            // Fallback to browser link after 2 seconds
+            setTimeout(() => {
+                window.location = fallbackLink;
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
+        
         
                 
 
